@@ -44,11 +44,11 @@ export default class MusicMap extends Component {
           <code>audio</code>
           .
         </audio>
-        <label htmlFor={music.trackId}>
+        <label htmlFor={ music.trackId }>
           <input
             type="checkbox"
             name="checkbox"
-            id={music.trackId}
+            id={ music.trackId }
             data-testid={ `checkbox-music-${music.trackId}` }
             onChange={ this.handleFavoriteMusics }
             checked={ checked }
