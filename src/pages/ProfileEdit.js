@@ -80,27 +80,22 @@ export default class ProfileEdit extends Component {
     return (
       <div data-testid="page-profile-edit" className="flex">
         <Header />
-        <div className="flex w-full h-screen overflow-y-scroll justify-center items-center">
-          { isLoading ? <Loading />
-            : (
-              <div
-              className="flex w-full h-screen overflow-y-scroll justify-center items-center"
+        <div
+          className="flex w-full h-screen overflow-y-scroll
+        justify-center items-center"
+        >
+          { isLoading ? <Loading /> : (
+            <div
+              className="flex w-full h-screen overflow-y-scroll
+                justify-center items-center"
             >
-               <div
-            className="bg-white h-450 w-3/6 p-20 px-20 rounded-2xl m-auto text-center"
-          >
-              <form>
+              <div
+                className="bg-white h-450 w-3/6 p-20
+                  px-20 rounded-2xl m-auto text-center"
+              >
+                <img src={ image } alt={ name } />
                 <div className="flex justify-center m-5">
-                <fieldset>
-                  <img
-                    src={ image }
-                    alt={ name }
-                  />
-                  <br/>
-                  <br/>
-                  <br/>
-                  <div className="flex justify-center m-5">
-                   <h3 className="font-semibold">Imagem do Perfil:</h3>
+                  <p className="font-semibold">Imagem do Perfil:</p>
                   <input
                     name="image"
                     type="text"
@@ -110,26 +105,21 @@ export default class ProfileEdit extends Component {
                     placeholder="Link da imagem do perfil"
                     className="mx-2 border-solid border-2 border-blue-700 rounded-md"
                   />
-                  </div>
-                </fieldset>
                 </div>
                 <div className="flex justify-center m-5">
-                <h3 className="font-semibold">Nome:</h3>
-                <label htmlFor="name">
+                  <h3 className="font-semibold">Nome:</h3>
                   <input
                     type="text"
                     name="name"
-                    placeholder='Digite seu nome'
+                    placeholder="Digite seu nome"
                     value={ name }
                     data-testid="edit-input-name"
                     onChange={ this.handleInput }
                     className="mx-2 border-solid border-2 border-blue-700 rounded-md"
                   />
-                </label>
                 </div>
                 <div className="flex justify-center m-5">
-                <h3 className="font-semibold">Email:</h3>
-                <label htmlFor="email">
+                  <h3 className="font-semibold">Email:</h3>
                   <input
                     type="email"
                     name="email"
@@ -137,38 +127,36 @@ export default class ProfileEdit extends Component {
                     data-testid="edit-input-email"
                     onChange={ this.handleInput }
                     placeholder="Digite seu e-mail"
+                    className="mx-2 border-solid
+                          border-2 border-blue-700 rounded-md"
+                  />
+                </div>
+                <div className="flex justify-center m-5">
+                  <h3 className="font-semibold">Description:</h3>
+                  <textarea
+                    value={ description }
+                    name="description"
+                    data-testid="edit-input-description"
+                    onChange={ this.handleInput }
+                    placeholder="Sobre mim"
                     className="mx-2 border-solid border-2 border-blue-700 rounded-md"
                   />
-                </label>
                 </div>
                 <div className="flex justify-center m-5">
-                <h3 className="font-semibold">Description:</h3>
-                <label>
-                <textarea
-                  value={ description }
-                  name="description"
-                  data-testid="edit-input-description"
-                  onChange={ this.handleInput }
-                  placeholder="Sobre mim"
-                  className="mx-2 border-solid border-2 border-blue-700 rounded-md"
-                />
-                </label>
+                  <button
+                    type="button"
+                    data-testid="edit-button-save"
+                    disabled={ isDisabled }
+                    onClick={ this.handleSaveButton }
+                    className="w-400 h-10 mt-400 ml 440
+                        rounded-2xl p-2 text-white w-full bg-blue-700"
+                  >
+                    Salvar
+                  </button>
                 </div>
-                <div className="flex justify-center m-5">
-                <button
-                  type="button"
-                  data-testid="edit-button-save"
-                  disabled={ isDisabled }
-                  onClick={ this.handleSaveButton }
-                  className="w-400 h-10 mt-400 ml 440 rounded-2xl p-2 text-white w-full bg-blue-700"
-                >
-                  Salvar
-                </button>
-                </div>
-              </form>
               </div>
-              </div>
-            )}
+            </div>
+          )}
         </div>
         { teste && <Redirect to="/profile" />}
       </div>

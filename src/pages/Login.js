@@ -45,11 +45,11 @@ export default class Login extends Component {
   render() {
     const { isLoading, teste, isEnterButtonDisabled } = this.state;
     return (
-      <div 
-      data-testid="page-login"
-      className="flex items-center justify-center w-auto h-screen mx-2.5 px-20"
+      <div
+        data-testid="page-login"
+        className="flex items-center justify-center w-auto h-screen mx-2.5 px-20"
       >
-          <img
+        <img
           alt="logo2"
           src={ group6 }
           className="align-top left-0 absolute top-0 w-2/12"
@@ -72,16 +72,16 @@ export default class Login extends Component {
           />
           <br />
           <br />
-        { isLoading && <Loading />}
-        { isLoading
+          { isLoading && <Loading />}
+          { isLoading
         || <Form
           onInputChange={ this.onInputChange }
           onSaveButtonClick={ this.onSaveButtonClick }
           formState={ this.state }
           disabled={ isEnterButtonDisabled }
         /> }
-        { teste && <Redirect to="/search" /> }
-      </div>
+          { teste && <Redirect to="/search" /> }
+        </div>
       </div>
     );
   }

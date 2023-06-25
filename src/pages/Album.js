@@ -34,34 +34,35 @@ export default class Album extends Component {
       <div className="flex" data-testid="page-album">
         <Header />
         <div className="flex flex-col w-full h-screen">
-        <div className="h-1/6 p-3 flex justify-center items-center">
-        <img
-          src={ artworkUrl100 }
-          alt={ albumName }
-          className="flex items-center text-right mt-16 justify-center w-40 h-40 rounded-3xl shadow-2xl"
-        />
-        <h4
-          data-testid="artist-name"
-          className="text-left p-5 text-xs"
-        >
-          {artName}
-        </h4>
-        <h3
-          data-testid="album-name"
-          className="text-center font-bold ml-4"
-        >
-          {albumName}
-        </h3>
+          <div className="h-1/6 p-3 flex justify-center items-center">
+            <img
+              src={ artworkUrl100 }
+              alt={ albumName }
+              className="flex items-center text-right mt-16
+              justify-center w-40 h-40 rounded-3xl shadow-2xl"
+            />
+            <h4
+              data-testid="artist-name"
+              className="text-left p-5 text-xs"
+            >
+              {artName}
+            </h4>
+            <h3
+              data-testid="album-name"
+              className="text-center font-bold ml-4"
+            >
+              {albumName}
+            </h3>
+          </div>
+          <br />
+          <br />
+          <div className="bg-slate-100 h-screen overflow-x-scroll">
+            <MusicCard
+              musics={ musics }
+            />
+
+          </div>
         </div>
-        <br/>
-        <br/>
-        <div className="bg-slate-100 h-screen overflow-x-scroll">
-        <MusicCard
-          musics={ musics }
-        />
-      
-      </div>
-      </div>
       </div>
     );
   }
