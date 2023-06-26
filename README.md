@@ -92,3 +92,4 @@ Contribuições são bem-vindas! Se você quiser melhorar este projeto, siga as 
    git commit -m 'Minha nova feature'
    ```
 
+Deploy: <a href="https://trybe-tunes-vert.vercel.app/">Link</a>
