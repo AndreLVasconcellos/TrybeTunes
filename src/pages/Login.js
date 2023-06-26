@@ -47,7 +47,8 @@ export default class Login extends Component {
     return (
       <div
         data-testid="page-login"
-        className="flex items-center justify-center w-auto h-screen mx-2.5 px-20"
+        className="flex flex-col items-center justify-center
+        px-6 py-8 mx-auto md:h-screen lg:py-0"
       >
         <img
           alt="logo2"
@@ -60,10 +61,9 @@ export default class Login extends Component {
           className="rigth-0 absolute bottom-0 right-0 w-2/12"
         />
         <div
-          className="bg-white
-        h-450 w-3/6
-        p-20 px-20 rounded-2xl ml-265 mb-20
-        text-center"
+          className="w-full bg-white rounded-lg
+          shadow dark:border md:mt-0 sm:max-w-md xl:p-0
+           dark:bg-gray-800 dark:border-gray-700"
         >
           <img
             alt="logo"
